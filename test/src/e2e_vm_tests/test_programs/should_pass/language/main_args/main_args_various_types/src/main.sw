@@ -1,6 +1,6 @@
 script;
 
-fn eq_str_3(a: str[3], b: str[3]) -> bool {
+fn eq_str_3(a: str, b: str) -> bool {
     asm(a: a, b: b, len: 3, r) {
         meq r a b len;
         r: bool
@@ -13,7 +13,7 @@ enum SignedNum {
 }
 
 struct OpName {
-    val: str[3]
+    val: str
 }
 
 fn main(ops: [(OpName, SignedNum); 2]) -> u64 {
